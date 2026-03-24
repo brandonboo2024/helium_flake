@@ -87,4 +87,11 @@ stdenv.mkDerivation (finalAttrs: {
 
       runHook postInstall
       '';
+  
+    meta = {
+      description = "The Chromium-based web browser made for people, with love.";
+      homepage = "https://github.com/imputnet/helium-linux";
+      license = lib.licenses.gpl3Only;
+      mainProgram = "helium";
+    };
 })

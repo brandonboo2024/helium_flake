@@ -1,5 +1,5 @@
 {
-  description = "A very basic flake";
+  description = "Flake for Helium Browser";
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
@@ -10,9 +10,7 @@
     pkgs = import nixpkgs { system = "x86_64-linux"; };
   in
   {
-    packages.x86_64-linux.hello = pkgs.callPackage ./hello.nix { };
-    packages.x86_64-linux.icat = pkgs.callPackage ./icat.nix { };
     packages.x86_64-linux.helium = pkgs.callPackage ./helium.nix { };
-
+    packages.x86_64-linux.default = self.packages.x86_64-linux.helium;
   };
 }
