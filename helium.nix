@@ -93,5 +93,6 @@ stdenv.mkDerivation (finalAttrs: {
       homepage = "https://github.com/imputnet/helium-linux";
       license = lib.licenses.gpl3Only;
       mainProgram = "helium";
+      platforms = [ "x86_64-linux" ];
     };
 })
