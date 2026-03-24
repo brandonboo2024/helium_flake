@@ -72,9 +72,19 @@ stdenv.mkDerivation (finalAttrs: {
 
     installPhase = ''
       runHook preInstall
+
       mkdir -p $out/bin $out/lib/helium
       cp -r ./* $out/lib/helium
+
       ln -s $out/lib/helium/helium $out/bin/helium
+      
+      mkdir -p $out/share/applications
+      cp $out/lib/helium/helium.desktop $out/share/applications
+
+      mkdir -p $out/share/pixmaps
+      cp $out/lib/helium/product_logo_256.png $out/share/pixmaps/helium.png
+
+
       runHook postInstall
       '';
 })
