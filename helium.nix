@@ -26,12 +26,12 @@
 
 stdenv.mkDerivation (finalAttrs: {
     pname = "helium";
-    version = "0.10.7.1";
+    version = "0.10.8.1";
 
 
     src = fetchurl {
-    url = "https://github.com/imputnet/helium-linux/releases/download/0.10.7.1/helium-0.10.7.1-x86_64_linux.tar.xz";
-    hash = "sha256-ZHziopdl8ClZQJUHXtIIb9ok/flZoixMdlLMKf5HUUo=";
+    url = "https://github.com/imputnet/helium-linux/releases/download/0.10.8.1/helium-0.10.8.1-x86_64_linux.tar.xz";
+    hash = "sha256-qu0GvCbg4Eq1cHrTerOzH98KkL0FCSVQgLe+QWyH9d4=";
     };
 
     nativeBuildInputs = [
